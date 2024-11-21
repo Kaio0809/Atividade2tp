@@ -27,8 +27,8 @@ class Banco:
         for conta in self.__contas:
             if conta.get_numero() == numero:
                 return conta
-            else:
-                return None
+        else:
+            return None
     
     def creditar(self, numero:str, valor:float):
         conta = self.procurar(numero)
@@ -59,4 +59,5 @@ class Banco:
             conta_destino.creditar(valor)
         else:
             return "Uma das contas não existe"
-    
+
+
